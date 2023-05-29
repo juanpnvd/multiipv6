@@ -17,6 +17,7 @@ install_3proxy() {
     wget -qO- $URL | bsdtar -xvf-
     cd 3proxy-3proxy-0.8.6
     yum install make
+    yum install iptables
     make -f Makefile.Linux
     mkdir -p /usr/local/etc/3proxy/bin
     mkdir -p /usr/local/etc/3proxy/logs
