@@ -16,6 +16,7 @@ install_3proxy() {
     URL="https://raw.githubusercontent.com/quayvlog/quayvlog/main/3proxy-3proxy-0.8.6.tar.gz"
     wget -qO- $URL | bsdtar -xvf-
     cd 3proxy-3proxy-0.8.6
+    yum install make
     make -f Makefile.Linux
     mkdir -p /usr/local/etc/3proxy/bin
     mkdir -p /usr/local/etc/3proxy/logs
